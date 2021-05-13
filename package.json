@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"test": "npx codeceptjs run --features --grep '@probando' --plugins allure --verbose",
+		"test": "npx codeceptjs run --tests --plugins allure --verbose",
 		"codeceptjs": "codeceptjs run --steps",
 		"codeceptjs:allure": "npx codeceptjs run --plugins allure",
 		"show:report": "allure serve output",

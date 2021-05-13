@@ -9,7 +9,11 @@ const getData = (route) => {
 
 	const data = new DataTable(rows[0])
 	rows.shift()
-	rows.forEach((row) => data.add(row))
+	rows.forEach((row) => {
+		if (row.length) {
+			data.add(row)
+		}
+	})
 	return data
 }
 

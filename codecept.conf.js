@@ -2,24 +2,18 @@ exports.config = {
 	output: './output',
 	helpers: {
 		WebDriver: {
-			url: 'https://www.saucedemo.com',
+			url: 'https://int.providamx.metlife.com/ProvidaWeb',
 			browser: 'chrome',
 		},
 	},
 	include: {
 		I: './steps_file.js',
+		loginPage: './pages/loginPage.js',
 	},
 	mocha: {},
 	bootstrap: null,
 	teardown: null,
 	hooks: [],
-	gherkin: {
-		features: './features/*.feature',
-		steps: [
-			'./step_definitions/steps.js',
-			'./step_definitions/loginSteps.js',
-		],
-	},
 	plugins: {
 		screenshotOnFail: {
 			enabled: true,
