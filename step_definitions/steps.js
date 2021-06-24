@@ -6,8 +6,8 @@ Given('Im logged in', async () => {
 	I.waitToHide("Cargando",10)
 	const amNotILoggedIn = await tryTo(() => I.see('MONITOR FCS'))
 	if (amNotILoggedIn) {
-		I.fillField('emailLogin', 's_fuentesrj@globalhitss.com')
-		I.fillField('passwordLogin', 'FGhr%2!z5APh')
+		I.fillField('emailLogin', 'max.chavarriamendez@gmail.com')
+		I.fillField('passwordLogin', 'Guitarpro25')
 		I.click('Ingresar')
 	}
 })
