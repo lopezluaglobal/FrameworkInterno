@@ -2,7 +2,7 @@ exports.config = {
 	output: './output',
 	helpers: {
 		WebDriver: {
-			url: 'https://int.providamx.metlife.com/ProvidaWeb',
+			url: 'https://www.fcs-monitoreo.com/home.html',
 			browser: 'chrome',
 		},
 	},
@@ -14,6 +14,13 @@ exports.config = {
 	bootstrap: null,
 	teardown: null,
 	hooks: [],
+	gherkin: {
+		features: './features/*.feature',
+		steps: [
+			'./step_definitions/steps.js',
+			'./step_definitions/registroSteps.js',
+		],
+	},
 	plugins: {
 		screenshotOnFail: {
 			enabled: true,

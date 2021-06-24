@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"test": "npx codeceptjs run --tests --plugins allure --verbose",
+		"test:gherkin": "npx codeceptjs run --features --grep '@probando' --plugins allure --verbose",
 		"codeceptjs": "codeceptjs run --steps",
 		"codeceptjs:allure": "npx codeceptjs run --plugins allure",
 		"show:report": "allure serve output",
