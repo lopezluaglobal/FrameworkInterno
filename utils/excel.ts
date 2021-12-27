@@ -1,8 +1,8 @@
-const XLSX = require('xlsx')
+import XLSX from 'xlsx'
 
-const getData = (route) => {
+export const getData = (route) => {
 	const workbook = XLSX.readFile(route)
-	const rows = XLSX.utils.sheet_to_json(workbook.Sheets.Hoja1, {
+	const rows: any = XLSX.utils.sheet_to_json(workbook.Sheets.Hoja1, {
 		header: 1,
 		raw: false,
 	})
@@ -16,5 +16,3 @@ const getData = (route) => {
 	})
 	return data
 }
-
-exports.getData = getData

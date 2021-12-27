@@ -1,14 +1,25 @@
+require('ts-node/register')
+
 exports.config = {
 	output: './output',
 	helpers: {
-		WebDriver: {
-			url: 'https://www.fcs-monitoreo.com/home.html',
-			browser: 'chrome',
+		Playwright: {
+			url: 'http://zero.webappsecurity.com/login.html',
+			show: true,
+			browser: 'chromium',
+			waitForNavigation: 'networkidle0',
+			video: true,
+			keepVideoForPassedTests: true,
+			trace: true,
+			keepTraceForPassedTests: true,
+		},
+		PlaywrightVideoAllure: {
+			require: './utils/playwrightVideoAllure_helper',
 		},
 	},
 	include: {
 		I: './steps_file.js',
-		loginPage: './pages/loginPage.js',
+		loginPage: './pages/loginPage',
 	},
 	mocha: {},
 	bootstrap: null,
@@ -16,12 +27,12 @@ exports.config = {
 	hooks: [],
 	gherkin: {
 		features: './features/*.feature',
-		steps: [
-			'./step_definitions/steps.js',
-			'./step_definitions/registroSteps.js',
-		],
+		steps: ['./step_definitions/loginSteps'],
 	},
 	plugins: {
+		subtitles: {
+			enabled: true,
+		},
 		screenshotOnFail: {
 			enabled: true,
 		},
@@ -32,9 +43,11 @@ exports.config = {
 		tryTo: {
 			enabled: true,
 		},
-		allure: {},
-		selenoid: {
+		allure: {
 			enabled: true,
+		},
+		selenoid: {
+			enabled: false,
 			deletePassed: false,
 			autoCreate: true,
 			autoStart: true,
@@ -43,6 +56,6 @@ exports.config = {
 			enableLog: true,
 		},
 	},
-	tests: './tests/*_test.js',
-	name: 'Webdriver-video',
+	tests: './tests/*_test.ts',
+	name: 'Framework',
 }
