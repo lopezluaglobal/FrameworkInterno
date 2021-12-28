@@ -53,3 +53,9 @@ jobs:
           publish_dir: ./allure-report
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
+
+         - uses: actions/upload-artifact@v2
+              if: ${{ always() }}
+              with:
+                name: test-report-html
+                path: ./allure-report
