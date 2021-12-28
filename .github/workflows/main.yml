@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.5.0
         with:
-            node-version: 12.18.3
+          node-version: 12.18.3
 
       # Runs a single command using the runners shell
       - name: Installing dependencies
@@ -39,8 +39,17 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Installing dependencies for playwright
         run: npx playwright install-deps
-        
-        
+
+
       # Runs a set of commands using the runners shell
       - name: Running tests
         run: npm run test
+
+      # Generate report
+      - name: Deploy report page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
