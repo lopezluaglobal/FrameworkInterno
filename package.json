@@ -8,6 +8,7 @@
     "codeceptjs": "codeceptjs run --steps",
     "codeceptjs:allure": "npx codeceptjs run --plugins allure",
     "generate:report": "allure generate output",
+    "generate:report:githubactions": "allure generate /home/runner/work/FrameworkInterno/FrameworkInterno/output",
     "show:report": "allure serve output",
     "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
     "codeceptjs:ui": "codecept-ui --app",

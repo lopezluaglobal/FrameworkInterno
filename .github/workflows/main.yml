@@ -47,7 +47,7 @@ jobs:
 
       # Generates report allure
       - name: Generating allure report tests
-        run: npm run generate:report
+        run: npm run generate:report:githubactions
 
 
 
