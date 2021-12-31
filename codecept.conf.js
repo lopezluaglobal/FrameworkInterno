@@ -5,16 +5,30 @@ exports.config = {
 	helpers: {
 		Playwright: {
 			url: 'http://zero.webappsecurity.com/login.html',
-			show: false,
+			show: true,
 			browser: 'chromium',
-			waitForNavigation: 'networkidle0',
+			waitForNavigation: 'domcontentloaded',
 			video: true,
 			keepVideoForPassedTests: true,
+			pressKeyDelay: 100,
 			trace: true,
 			keepTraceForPassedTests: true,
+			devTools: true,
 		},
 		PlaywrightVideoAllure: {
 			require: './utils/playwrightVideoAllure_helper',
+		},
+		REST: {
+			endpoint: 'https://rickandmortyapi.com/api/character/',
+		},
+		GraphQL: {
+			endpoint: 'https://rickandmortyapi.com/graphql',
+		},
+		DbHelper: {
+			require: './node_modules/codeceptjs-dbhelper',
+		},
+		ChaiWrapper: {
+			require: 'codeceptjs-chai',
 		},
 	},
 	include: {
