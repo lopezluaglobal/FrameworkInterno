@@ -51,8 +51,8 @@ jobs:
 
       # Generates report allure
       - name: Generating allure report tests
-        if: ${{ always() }}
-            run: npm run generate:report:githubactions
+        if: always()
+        run: npm run generate:report:githubactions
 
 
 
