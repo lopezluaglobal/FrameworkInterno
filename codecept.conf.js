@@ -5,7 +5,7 @@ exports.config = {
 	helpers: {
 		Playwright: {
 			url: 'http://zero.webappsecurity.com/login.html',
-			show: true,
+			show: false,
 			browser: 'chromium',
 			waitForNavigation: 'domcontentloaded',
 			video: true,
