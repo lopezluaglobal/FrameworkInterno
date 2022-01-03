@@ -3,7 +3,7 @@ Feature('Pruebas de bases de datos')
 BeforeSuite(async ({ I }) => {
 	// Connects to a database
 	// The first parameter is the key that will hold a reference to the database
-	// I.connect('testdb', 'mysql://root:mypassword@localhost:3306/testdb')
+	// I.connect('testdb', 'mysql://user:mypassword@localhost:3306/testdb')
 	I.connect(
 		'testDB',
 		'mysql://u179854851_nextJS:Hola1234@sql181.main-hosting.eu/u179854851_nextJS'

@@ -16,13 +16,21 @@ module.exports = {
 			},
 		},
 	},
-	extends: ['airbnb-base', 'prettier', 'plugin:codeceptjs/recommended'],
+	extends: [
+		'airbnb-base',
+		'prettier',
+		'plugin:codeceptjs/recommended',
+		'eslint:recommended',
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
+	],
 	parserOptions: {
 		ecmaVersion: 12,
 	},
 	rules: {
 		'codeceptjs/no-actor-in-scenario': 2,
 		'import/prefer-default-export': 'off',
+		'storybook/prefer-csf': 'off',
 		'import/extensions': [
 			'error',
 			'ignorePackages',

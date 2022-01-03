@@ -1,11 +1,15 @@
 require('ts-node/register')
+// Esto se debe de descomentar si se va a usar el la propiedad de emulate en la configuracion
+// const { devices } = require('playwright')
 
 exports.config = {
 	output: './output',
 	helpers: {
 		Playwright: {
 			url: 'http://zero.webappsecurity.com/login.html',
-			show: false,
+			// Ejemplo de emular un dispositvo pero por defecto en todas las pruebas si quiere solo probarse solo en una prueba vease el test de emulacionDeDispositivos
+			// emulate: devices['iPhone 6'],
+			show: true,
 			browser: 'chromium',
 			waitForNavigation: 'domcontentloaded',
 			video: true,
@@ -13,7 +17,6 @@ exports.config = {
 			pressKeyDelay: 100,
 			trace: true,
 			keepTraceForPassedTests: true,
-			devTools: true,
 		},
 		PlaywrightVideoAllure: {
 			require: './utils/playwrightVideoAllure_helper',
