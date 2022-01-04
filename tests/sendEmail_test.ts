@@ -5,6 +5,7 @@ import { sendEmail } from '../utils/emails'
 Feature('Prueba para usar la utilidad de mandar email')
 // Recurda agregar tus credencuales en el archivo .env o sino mandalas en al funcion de sendEmail
 // Aqui si tienes acceso a los datos del test y puedes enviar el video de la prueba
+// ten en cuenta que esto se enviara despeus de cada test no solo de sendEmail_test.ts
 event.dispatcher.on(event.test.after, (test) => {
 	sendEmail({
 		destination: 'mcmora94@gmail.com',
