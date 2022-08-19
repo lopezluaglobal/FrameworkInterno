@@ -6,7 +6,7 @@ Feature: Registro de citas
     And I select the contact
     And I should create the appointment with <Name> , <Surname> , <Phone> , <Email> , <Date> , <Time>
     Examples:
-      | Name               | Surname           | Phone              | Email              | Date | Time |
+      | Name               | Surname           | Phone                                       | Email              | Date | Time |
       | {{internet.email}} | {{name.findName}} | {{phone.phoneNumber('+52-55-##-##-##-##')}} | {{internet.email}} | algo | algo |
 
 
