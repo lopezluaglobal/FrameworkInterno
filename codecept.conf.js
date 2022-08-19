@@ -49,7 +49,7 @@ exports.config = {
 	hooks: [],
 	gherkin: {
 		features: './features/*.feature',
-		steps: ['./step_definitions/loginSteps'],
+		steps: ['./step_definitions/RegistroSteps'],
 	},
 	plugins: {
 		subtitles: {
@@ -76,6 +76,9 @@ exports.config = {
 			sessionTimeout: '30m',
 			enableVideo: true,
 			enableLog: true,
+		},
+		fakerTransform: {
+			enabled: true,
 		},
 	},
 	tests: './tests/*_test.ts',
