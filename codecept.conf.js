@@ -67,6 +67,7 @@ exports.config = {
 		},
 		allure: {
 			enabled: true,
+			require: '@codeceptjs/allure-legacy',
 		},
 		selenoid: {
 			enabled: false,

@@ -1,7 +1,7 @@
 const { I } = inject()
 
 Given('Im logged in', async () => {
-	I.wait(30)
+	I.wait(10)
 })
 
 Given(/^I select the contact$/, () => {
