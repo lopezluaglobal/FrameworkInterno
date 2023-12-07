@@ -32,6 +32,8 @@ Scenario(
 			'lopez'
 		)
 
+		// TODO checar si solo es un error de tipos
+		// @ts-expect-error because the type of 'insert' is not correctly inferred
 		I.assertEqual(insert.affectedRows, 1)
 
 		const response = await I.run('testDB', 'SELECT * FROM pruebas')
