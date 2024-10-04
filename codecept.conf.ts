@@ -30,11 +30,14 @@ exports.config = {
 		DbHelper: {
 			require: './node_modules/codeceptjs-dbhelper',
 		},
-		ResembleHelper: {
-			require: 'codeceptjs-resemblehelper',
-			baseFolder: './tests/screenshots/base/',
-			diffFolder: './tests/screenshots/diff/',
-		},
+		// TODO: Revisar o actualizar la librería.
+
+		//ResembleHelper: {
+		//	require: 'codeceptjs-resemblehelper',
+		//	baseFolder: './tests/screenshots/base/',
+		//	diffFolder: './tests/screenshots/diff/',
+		//},
+
 		ChaiWrapper: {
 			require: 'codeceptjs-chai',
 		},

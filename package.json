@@ -52,7 +52,6 @@
     "@codeceptjs/allure-legacy": "^1.0.2",
     "@types/nodemailer": "^6.4.4",
     "codeceptjs-chai": "^2.3.5",
-    "codeceptjs-resemblehelper": "^1.9.5",
     "D": "^1.0.0",
     "dotenv": "^10.0.0",
     "eslint-config-airbnb": "^18.2.1",

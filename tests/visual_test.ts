@@ -9,9 +9,10 @@ Scenario.skip(
 	async ({ I }) => {
 		I.amOnPage('')
 		I.saveScreenshot('screenshot _de_prueba.png')
-		I.seeVisualDiff('screenshot _de_prueba.png', {
-			tolerance: 2,
-			prepareBaseImage: false,
-		})
+		// TODO: checar relacionado con ResembleHelper
+		//I.seeVisualDiff('screenshot _de_prueba.png', {
+		//	tolerance: 2,
+		//	prepareBaseImage: false,
+		//})
 	}
 )
